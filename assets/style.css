@@ -115,6 +115,9 @@
 
 
       @media (max-width: 992px) {
+        body{
+          background: linear-gradient(90deg, #0000ff, #00ff00);
+        }
         .Global {
           /* Change alignment for stacked content */
           flex-direction: column;
@@ -148,7 +151,7 @@
           order: 1;
           /* Put the Image at the top */
           max-width: 30%;
-          /* Make the profile image a bit larger */
+          content: url(https://media.tenor.com/g_A4grtscqYAAAAM/dumb-stupid.gif);
         }
 
         .socials {
@@ -158,6 +161,9 @@
       }
 
       @media (max-width: 600px) {
+        body{
+          background: linear-gradient(90deg, #00ff00, #ff0000);
+        }
 
         .Presentation,
         .Infos {
@@ -170,6 +176,7 @@
           /* Make the image proportionally larger on a tiny screen */
           margin-top: 20px;
           /* Add spacing at the top */
+          content: url(https://media.tenor.com/5rE2ZfDnS0kAAAAM/brainlet-brainlet-bike.gif);
         }
 
         h1 {
