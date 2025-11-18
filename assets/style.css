@@ -1,19 +1,17 @@
-      /* Reset some default browser styles (optional but common) */
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-
-      /* Set a default font for the whole page */
       body {
         font-family: "Story Script", sans-serif;
         background: linear-gradient(90deg, #ff0000, #0000ff);
         color: #ffffff;
-        /* dark text */
+
       }
 
-      /* Example element styling */
+
       h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
@@ -119,43 +117,33 @@
           background: linear-gradient(90deg, #0000ff, #00ff00);
         }
         .Global {
-          /* Change alignment for stacked content */
           flex-direction: column;
           gap: 30px;
           min-height: auto;
-          /* Allow content to dictate height */
         }
 
-        /* Make the content sections take up most of the screen width (e.g., 80%) */
         .Presentation,
         .Infos {
           width: 80%;
           text-align: center;
-          /* Center the text for the single-column layout */
           align-items: center;
-          /* Center items in Presentation/Infos flex containers */
         }
 
         .Infos {
-          /* Ensure social icons and other elements align correctly in the center */
           order: 3;
-          /* Push Infos to the bottom of the stack (Image, Presentation, Infos) */
         }
 
         .Presentation {
           order: 2;
-          /* Put Presentation in the middle */
         }
 
         .Image {
           order: 1;
-          /* Put the Image at the top */
           max-width: 30%;
           content: url(https://media.tenor.com/g_A4grtscqYAAAAM/dumb-stupid.gif);
         }
 
         .socials {
-          /* Ensure socials container is centered in the Infos section */
           justify-content: center;
         }
       }
@@ -168,19 +156,15 @@
         .Presentation,
         .Infos {
           width: 95%;
-          /* Use almost full width on small phones */
         }
 
         .Image {
           max-width: 50%;
-          /* Make the image proportionally larger on a tiny screen */
           margin-top: 20px;
-          /* Add spacing at the top */
           content: url(https://media.tenor.com/5rE2ZfDnS0kAAAAM/brainlet-brainlet-bike.gif);
         }
 
         h1 {
           font-size: 1.5rem;
-          /* Reduce font size for small screens */
         }
       }
