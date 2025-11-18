@@ -63,7 +63,7 @@ p {
 }
 
 .Presentation a {
-    align-self: flex-start; /* shrink to text size instead of stretching */
+    align-self: center; /* shrink to text size instead of stretching */
     display: inline-block;         /* shrink to text width but allow padding */
     padding: 10px 20px;            /* spacing inside the button */
     background-color: #ef05c4;     /* button color (blue) */
@@ -78,4 +78,10 @@ p {
 
 .Presentation a:hover {
     background-color: #03f6b5;     /* darker blue on hover */
+}
+.button{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
