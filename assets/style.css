@@ -1,87 +1,179 @@
-    /* Reset some default browser styles (optional but common) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      /* Reset some default browser styles (optional but common) */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-/* Set a default font for the whole page */
-body {
-  font-family: "Story Script", sans-serif;
-  background: linear-gradient(90deg, #ff0000, #0000ff);
-  color: #ffffff; /* dark text */
-}
+      /* Set a default font for the whole page */
+      body {
+        font-family: "Story Script", sans-serif;
+        background: linear-gradient(90deg, #ff0000, #0000ff);
+        color: #ffffff;
+        /* dark text */
+      }
 
-/* Example element styling */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+      /* Example element styling */
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
 
-p {
-  margin-bottom: 0.5rem;
-}
+      p {
+        margin-bottom: 0.5rem;
+      }
 
-.Global{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    height: 600px;
-}
-.Presentation{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 300px;
-}
-.Infos{
-    font-size: smaller;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: 400px;
-    gap: 5px;
-}
-.Logo{
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    
-}
-.socials {
-  display: flex; 
-  justify-content: space-around;
-  gap: 10px;  
-  margin-top: 10px;             
-}
+      .Global {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        min-height: 100vh;
+        width: 100%;
+        padding: 20px;
+      }
 
-.social-icon {
-  width: 30px;             /* small size */
-  height: 30px;
-}
+      .Presentation {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: 35%;
+        height: 70%;
+      }
 
-.Presentation a {
-    align-self: center; /* shrink to text size instead of stretching */
-    display: inline-block;         /* shrink to text width but allow padding */
-    padding: 10px 20px;            /* spacing inside the button */
-    background-color: #ef05c4;     /* button color (blue) */
-    color: white;                  /* text color */
-    text-decoration: none;          /* remove underline */
-    border-radius: 5px;            /* rounded corners */
-    font-weight: bold;             /* optional: make text bold */
-    text-align: center;            /* center text inside button */
-    cursor: pointer;               /* pointer on hover */
-    transition: background-color 0.2s; /* smooth hover effect */
-}
+      .Infos {
+        font-size: smaller;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 70%;
+        gap: 5px;
+        width: 15%;
+      }
 
-.Presentation a:hover {
-    background-color: #03f6b5;     /* darker blue on hover */
-}
-.button{
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-}
+      .Image {
+        flex-wrap: wrap;
+        max-width: 25%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid;
+        border-color: chartreuse
+      }
+
+      .Logo {
+        position: fixed;
+        top: 2%;
+        left: 1%;
+
+      }
+
+      .socials {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .social-icon {
+        width: 30px;
+        /* small size */
+        height: 30px;
+      }
+
+      .Presentation a {
+        align-self: flex-start;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ef05c4;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .Presentation a:hover {
+        background-color: #03f6b5;
+
+      }
+
+      .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+
+      @media (max-width: 992px) {
+        .Global {
+          /* Change alignment for stacked content */
+          flex-direction: column;
+          gap: 30px;
+          min-height: auto;
+          /* Allow content to dictate height */
+        }
+
+        /* Make the content sections take up most of the screen width (e.g., 80%) */
+        .Presentation,
+        .Infos {
+          width: 80%;
+          text-align: center;
+          /* Center the text for the single-column layout */
+          align-items: center;
+          /* Center items in Presentation/Infos flex containers */
+        }
+
+        .Infos {
+          /* Ensure social icons and other elements align correctly in the center */
+          order: 3;
+          /* Push Infos to the bottom of the stack (Image, Presentation, Infos) */
+        }
+
+        .Presentation {
+          order: 2;
+          /* Put Presentation in the middle */
+        }
+
+        .Image {
+          order: 1;
+          /* Put the Image at the top */
+          max-width: 30%;
+          /* Make the profile image a bit larger */
+        }
+
+        .socials {
+          /* Ensure socials container is centered in the Infos section */
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 600px) {
+
+        .Presentation,
+        .Infos {
+          width: 95%;
+          /* Use almost full width on small phones */
+        }
+
+        .Image {
+          max-width: 50%;
+          /* Make the image proportionally larger on a tiny screen */
+          margin-top: 20px;
+          /* Add spacing at the top */
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          /* Reduce font size for small screens */
+        }
+      }
