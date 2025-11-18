@@ -32,7 +32,7 @@ V-card/
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/V-card.git
+git clone https://github.com/ldbecode/v-card.git
 ```
 
 ### **2. Open the project**
