@@ -1,0 +1,63 @@
+    /* Reset some default browser styles (optional but common) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a default font for the whole page */
+body {
+  font-family: "Story Script", sans-serif;
+  background: linear-gradient(90deg, #ff0000, #0000ff);
+  color: #ffffff; /* dark text */
+}
+
+/* Example element styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.Global{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 600px;
+}
+.Presentation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+}
+.Infos{
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 400px;
+    gap: 5px;
+}
+.Logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    
+}
+.socials {
+  display: flex; 
+  justify-content: space-around;
+  gap: 10px;  
+  margin-top: 10px;             
+}
+
+.social-icon {
+  width: 30px;             /* small size */
+  height: 30px;
+}
