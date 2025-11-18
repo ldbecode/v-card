@@ -61,3 +61,21 @@ p {
   width: 30px;             /* small size */
   height: 30px;
 }
+
+.Presentation a {
+    align-self: flex-start; /* shrink to text size instead of stretching */
+    display: inline-block;         /* shrink to text width but allow padding */
+    padding: 10px 20px;            /* spacing inside the button */
+    background-color: #ef05c4;     /* button color (blue) */
+    color: white;                  /* text color */
+    text-decoration: none;          /* remove underline */
+    border-radius: 5px;            /* rounded corners */
+    font-weight: bold;             /* optional: make text bold */
+    text-align: center;            /* center text inside button */
+    cursor: pointer;               /* pointer on hover */
+    transition: background-color 0.2s; /* smooth hover effect */
+}
+
+.Presentation a:hover {
+    background-color: #03f6b5;     /* darker blue on hover */
+}
